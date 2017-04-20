@@ -1,0 +1,52 @@
+package servletPackage;
+
+import java.io.IOException;
+import java.io.PrintWriter;
+import java.util.ArrayList;
+import java.util.Map;
+
+import javax.servlet.ServletException;
+import javax.servlet.annotation.WebServlet;
+import javax.servlet.http.HttpServlet;
+import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpServletResponse;
+
+import com.google.gson.Gson;
+import com.google.gson.JsonArray;
+import com.google.gson.JsonObject;
+
+import data.InformationData;
+import data.Trainee;
+import netscape.javascript.JSObject;
+
+/**
+ * Servlet implementation class Servlet
+ */
+@WebServlet(description = "this is sample servlet", urlPatterns = { "/Servlet" })
+public class Servlet extends HttpServlet implements javax.servlet.Servlet {
+	private static final long serialVersionUID = 1L;
+
+	/**
+	 * @see HttpServlet#doGet(HttpServletRequest request, HttpServletResponse response)
+	 */
+	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+		// TODO Auto-generated method stub
+		
+		ArrayList<Trainee> data=new ArrayList<Trainee>();
+		data.add(new Trainee("aaa",20));
+		data.add(new Trainee("aaa",21));
+		data.add(new Trainee("aaa",20));
+		data.add(new Trainee("aaa",21));
+		InformationData id=new InformationData(data,"hello from server");
+		String searchTerm=request.getParameter("searchTerm");
+		response.setContentType("application/json");
+		response.setCharacterEncoding("utf-8");
+		String json=new Gson().toJson(id);
+		PrintWriter writer=response.getWriter();
+		response.getWriter().write(json);
+	}
+	
+protected void doPost(HttpServletRequest request,HttpServletResponse response){
+		
+	}
+}

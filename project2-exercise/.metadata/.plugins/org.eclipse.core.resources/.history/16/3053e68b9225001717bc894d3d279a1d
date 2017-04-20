@@ -1,0 +1,8 @@
+package servletPackage;
+
+import javax.servlet.ServletContextEvent;
+import javax.servlet.ServletContextListener;
+
+public class WebContext implements  ServletContextListener{
+	
+}
