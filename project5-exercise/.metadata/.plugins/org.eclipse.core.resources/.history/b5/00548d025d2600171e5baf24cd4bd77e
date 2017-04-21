@@ -1,0 +1,51 @@
+package BookPackage;
+
+import javax.faces.bean.ManagedBean;
+import javax.faces.bean.SessionScoped;
+
+@SessionScoped
+@ManagedBean
+public class BookEntity {
+	private int ISBN;
+	private String title;
+	private String author;
+	private String publisher;
+	private int price;
+	
+	public BookEntity(int isbn,String title,String author,String publisher,int price){
+		this.ISBN=isbn;
+		this.title=title;
+		this.author=author;
+		this.publisher=publisher;
+	}
+	public int getISBN() {
+		return ISBN;
+	}
+	public void setISBN(int iSBN) {
+		ISBN = iSBN;
+	}
+	public String getTitle() {
+		return title;
+	}
+	public void setTitle(String title) {
+		this.title = title;
+	}
+	public String getAuthor() {
+		return author;
+	}
+	public void setAuthor(String author) {
+		this.author = author;
+	}
+	public String getPublisher() {
+		return Publisher;
+	}
+	public void setPublisher(String publisher) {
+		Publisher = publisher;
+	}
+	public int getPrice() {
+		return price;
+	}
+	public void setPrice(int price) {
+		this.price = price;
+	}
+}

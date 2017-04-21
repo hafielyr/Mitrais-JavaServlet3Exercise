@@ -1,0 +1,28 @@
+package BookPackage;
+
+import java.io.Serializable;
+import java.util.ArrayList;
+
+import javax.annotation.PostConstruct;
+import javax.faces.bean.ManagedBean;
+import javax.faces.bean.SessionScoped;
+
+import com.sun.xml.internal.bind.v2.schemagen.xmlschema.List;
+
+@ManagedBean
+@SessionScoped
+public class CrudBean implements Serializable{
+	private ArrayList<BookEntity> books;
+	private BookEntity book=new BookEntity();
+	private BookEntity beforeEditBook=null;
+	private boolean edit;
+	
+	@PostConstruct
+	public void init(){
+		books=new ArrayList<BookEntity>();
+	}
+	
+	public void add(){
+		book=new BookEntity();
+	}
+}

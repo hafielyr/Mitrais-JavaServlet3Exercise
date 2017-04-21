@@ -38,7 +38,7 @@
 	<section name="javadoc">
 		<item value="public" key="access"/>
 		<item value="false" key="noindex"/>
-		<item value="C:\Users\trainee\Java Servlet 3 Exercises\project3-exercise\WebService\javadoc.xml" key="antpath"/>
+		<item value="C:\Users\trainee\Java Servlet 3 Exercises\project4-exercise\ServletProject4\javadoc.xml" key="antpath"/>
 		<item value="false" key="nodeprecatedlist"/>
 		<item value="true" key="use"/>
 		<item value="true" key="author"/>
@@ -52,9 +52,39 @@
 		<item value="true" key="splitindex"/>
 		<item value="true" key="fromStandard"/>
 		<item value="false" key="notree"/>
-		<item value="C:\Users\trainee\Java Servlet 3 Exercises\project3-exercise\WebService\doc" key="destdir"/>
+		<item value="C:\Users\trainee\Java Servlet 3 Exercises\project4-exercise\ServletProject4\doc" key="destdir"/>
 		<item value="false" key="openinbrowser"/>
 		<section name="projects">
+			<section name="sampleApplication">
+				<item value="C:\Users\trainee\Java Servlet 3 Exercises\project4-exercise\sampleApplication\javadoc.xml" key="antpath"/>
+				<item value="C:\Users\trainee\Java Servlet 3 Exercises\project4-exercise\sampleApplication\doc" key="destdir"/>
+				<item value="" key="href"/>
+			</section>
+			<section name="SampleServlet">
+				<item value="C:\Users\trainee\Java Servlet 3 Exercises\project4-exercise\SampleServlet\javadoc.xml" key="antpath"/>
+				<item value="C:\Users\trainee\Java Servlet 3 Exercises\project4-exercise\SampleServlet\doc" key="destdir"/>
+				<item value="" key="href"/>
+			</section>
+			<section name="WebService">
+				<item value="C:\Users\trainee\Java Servlet 3 Exercises\project4-exercise\WebService\javadoc.xml" key="antpath"/>
+				<item value="C:\Users\trainee\Java Servlet 3 Exercises\project3-exercise\WebService\doc" key="destdir"/>
+				<item value="" key="href"/>
+			</section>
+			<section name="ServletProject4">
+				<item value="C:\Users\trainee\Java Servlet 3 Exercises\project4-exercise\ServletProject4\javadoc.xml" key="antpath"/>
+				<item value="C:\Users\trainee\Java Servlet 3 Exercises\project4-exercise\ServletProject4\doc" key="destdir"/>
+				<item value="" key="href"/>
+			</section>
+			<section name="Servers">
+				<item value="C:\Users\trainee\Java Servlet 3 Exercises\project4-exercise\Servers\javadoc.xml" key="antpath"/>
+				<item value="C:\Users\trainee\Java Servlet 3 Exercises\project4-exercise\Servers\doc" key="destdir"/>
+				<item value="" key="href"/>
+			</section>
+			<section name="RemoteSystemsTempFiles">
+				<item value="C:\Users\trainee\Java Servlet 3 Exercises\project4-exercise\RemoteSystemsTempFiles\javadoc.xml" key="antpath"/>
+				<item value="C:\Users\trainee\Java Servlet 3 Exercises\project4-exercise\RemoteSystemsTempFiles\doc" key="destdir"/>
+				<item value="" key="href"/>
+			</section>
 		</section>
 	</section>
 	<section name="SourceActionDialog.methods">

@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="ISO-8859-1" ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:h="http://java.sun.com/jsf/html" xmlns:f="http://java.sun.com/jsf/core">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1" />
+<title>Insert title here</title>
+</head>
+<body>
+	<h:form rendered="#{not empty crudBean.books}">
+		<h:dataTable value="#{crudBean.books}" var="book">
+			<h:column><f:facet name="header">ISBN</f:facet>#{book.ISBN}</h:column>
+		</h:dataTable>
+	</h:form>
+	
+	
+	<h:inputText id="inputISBN" value="#{bookEntity.ISBN}"></h:inputText>
+	<h:inputText id="inputTitle" value="#{bookEntity.title}"></h:inputText>
+	<h:inputText id="inputAuthor" value="#{bookEntity.author}"></h:inputText>
+	<h:inputText id="inputPublisher" value="#{bookEntity.publisher}"></h:inputText>
+	<h:inputText id="inputPrice" value="#{bookEntity.price}"></h:inputText>
+	<h:commandButton id="submit" value="submit" action="BookForm"></h:commandButton>
+	<h:outputText id="outISBN" value="#{bookEntity.ISBN}"/>
+	<h:outputText id="outTitle" value="#{bookEntity.title}"/>
+	<h:outputText id="outAuthor" value="#{bookEntity.author}"/>
+	<h:outputText id="outPublisher" value="#{bookEntity.publisher}"/>
+	<h:outputText id="outPrice" value="#{bookEntity.price}"/>
+</body>
+</html>

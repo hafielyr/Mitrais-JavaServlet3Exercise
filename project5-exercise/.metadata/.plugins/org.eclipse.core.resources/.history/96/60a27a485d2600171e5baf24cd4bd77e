@@ -1,0 +1,14 @@
+package BookPackage;
+
+import java.io.Serializable;
+
+import javax.faces.bean.ManagedBean;
+import javax.faces.bean.SessionScoped;
+
+import com.sun.xml.internal.bind.v2.schemagen.xmlschema.List;
+
+@ManagedBean
+@SessionScoped
+public class CrudBean implements Serializable{
+	private List<BookEntity> books;
+}

@@ -1,0 +1,12 @@
+package BookPackage;
+
+import javax.faces.bean.ManagedBean;
+import javax.faces.bean.SessionScoped;
+
+@SessionScoped
+@ManagedBean
+public class BookEntity {
+	private int ISBN;
+	private String Title;
+	private String Author;
+}

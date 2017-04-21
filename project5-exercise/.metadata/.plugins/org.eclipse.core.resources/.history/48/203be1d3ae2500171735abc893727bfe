@@ -1,0 +1,17 @@
+package data;
+
+import java.util.ArrayList;
+/**
+ * 
+ * @author trainee
+ *
+ */
+public class InformationData {
+	private ArrayList<Trainee> Data;
+	private String Message;
+	
+	public InformationData(ArrayList<Trainee> tr,String info){
+		this.Data=tr;
+		this.Message=info;
+	}
+}

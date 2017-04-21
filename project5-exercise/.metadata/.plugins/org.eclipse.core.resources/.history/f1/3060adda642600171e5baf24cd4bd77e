@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="ISO-8859-1" ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:h="http://java.sun.com/jsf/html" xmlns:f="http://java.sun.com/jsf/core">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1" />
+<title>Insert title here</title>
+<style>
+table {
+    font-family: arial, sans-serif;
+    border-collapse: collapse;
+    width: 100%;
+}
+
+td, th {
+    border: 1px solid #dddddd;
+    text-align: left;
+    padding: 8px;
+}
+
+tr:nth-child(even) {
+    background-color: #dddddd;
+}
+</style>
+</head>
+<body>
+<h:panelGroup rendered="#{!crudBean.edit}">
+<h3>Add Book</h3>
+        <h:form>
+            <p>ISBN: <h:inputText value="#{crudBean.book.ISBN}" /></p>
+            <p>Title: <h:inputText value="#{crudBean.book.title}" /></p>
+            <p>Author: <h:inputText value="#{crudBean.book.author}" /></p>
+            <p>Publisher: <h:inputText value="#{crudBean.book.publisher}" /></p>
+            <p>Price:  $<h:inputText value="#{crudBean.book.price}" /></p>
+            <p>
+                <h:commandButton value="add" action="#{crudBean.add}" />
+                <h:commandButton value="reset" action="#{crudBean.reset}" />
+            </p>
+        </h:form>
+</h:panelGroup>
+
+<h:panelGroup rendered="#{crudBean.edit}">
+<h3>Edit Book</h3>
+        <h:form>
+            <p>ISBN: <h:inputText value="#{crudBean.book.ISBN}" /></p>
+            <p>Title: <h:inputText value="#{crudBean.book.title}" /></p>
+            <p>Author: <h:inputText value="#{crudBean.book.author}" /></p>
+            <p>Publisher: <h:inputText value="#{crudBean.book.publisher}" /></p>
+            <p>Price:  $<h:inputText value="#{crudBean.book.price}" /></p>
+            <p>
+                <h:commandButton value="save" action="#{crudBean.saveEdit}" />
+                <h:commandButton value="cancel" action="#{crudBean.cancelEdit}" />
+            </p>
+        </h:form>
+</h:panelGroup> 
+   
+	<h:form rendered="#{not empty crudBean.books}">
+	<table>
+		<tr>
+			<th>ISBN</th>
+			<th>Title</th>
+			<th>Author</th>
+			<th>Publisher</th>
+			<th>Price</th>
+		</tr>
+		<h:dataTable value="#{crudBean.books}" var="book">
+		<tr>
+			<td><h:column>#{book.ISBN}</h:column></td>
+			<td><h:column>#{book.title}</h:column></td>
+			<td><h:column>#{book.author}</h:column></td>
+			<td><h:column>#{book.publisher}</h:column></td>
+			<td><h:column>#{book.price}</h:column></td>
+			<h:column>
+                <h:commandButton value="edit" action="#{crudBean.edit(book)}" />
+            </h:column>
+			<h:column>
+                <h:commandButton value="delete" action="#{crudBean.delete(book)}" />
+            </h:column>
+            
+         </tr>
+		</h:dataTable>
+		
+	</table>
+	</h:form>
+	
+	<h:panelGroup rendered="#{empty crudBean.books}">
+        <p>No Books.</p>
+    </h:panelGroup>
+	
+	
+</body>
+</html>

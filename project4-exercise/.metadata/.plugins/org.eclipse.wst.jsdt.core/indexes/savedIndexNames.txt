@@ -1,10 +1,6 @@
 INDEX VERSION 1.3+C:\Users\trainee\Java Servlet 3 Exercises\project4-exercise\.metadata\.plugins\org.eclipse.wst.jsdt.core\indexes
 1986792499.index
 3591989915.index
-3548320466.index
 499835848.index
-4158683547.index
-3988083095.index
-2860606365.index
-2824106466.index
 1973255203.index
+3988083095.index
