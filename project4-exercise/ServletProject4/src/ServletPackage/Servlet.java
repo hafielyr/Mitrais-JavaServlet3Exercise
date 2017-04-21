@@ -1,0 +1,50 @@
+package ServletPackage;
+
+import java.io.IOException;
+import java.util.ArrayList;
+
+import javax.servlet.ServletException;
+import javax.servlet.annotation.WebServlet;
+import javax.servlet.http.HttpServlet;
+import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpServletResponse;
+
+import javafx.scene.control.Alert;
+
+/**
+ * Servlet implementation class Servlet
+ */
+/**
+ * 
+ * @author trainee
+ * The servlet
+ */
+@WebServlet("/Servlet")
+public class Servlet extends HttpServlet {
+	private static final long serialVersionUID = 1L;
+	ArrayList<String> Students=new ArrayList<String>();
+	/**
+	 * @see HttpServlet#doGet(HttpServletRequest request, HttpServletResponse response)
+	 */
+	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+		// TODO Auto-generated method stub
+		request.getSession().setAttribute("greeting", "hello");
+		request.getRequestDispatcher("/hello.jsp").forward(request, response);
+		//String input=(String)request.getSession().getAttribute("input");
+		
+	}
+	
+	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+		String input =request.getParameter("input");
+		Students.add(input);
+		request.getSession().setAttribute("Students", Students);
+		
+		String del =request.getParameter("delete");
+		if(del!=null && Students.indexOf(del)!=-1){
+		int index=Students.indexOf(del);
+		Students.remove(index);
+		}
+		request.getRequestDispatcher("/hello.jsp").forward(request, response);
+	}
+
+}

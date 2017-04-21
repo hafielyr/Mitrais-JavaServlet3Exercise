@@ -1,0 +1,13 @@
+package data;
+
+import java.util.ArrayList;
+
+public class InformationData {
+	private ArrayList<Trainee> tr;
+	private String str;
+	
+	public InformationData(ArrayList<Trainee> tr,String info){
+		this.tr=tr;
+		this.str=info;
+	}
+}

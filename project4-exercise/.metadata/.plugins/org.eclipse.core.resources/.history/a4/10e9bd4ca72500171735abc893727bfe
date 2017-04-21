@@ -1,0 +1,11 @@
+package data;
+
+public class InformationData {
+	private Trainee[] tr;
+	private String str;
+	
+	public InformationData(Trainee[] tr,String info){
+		this.tr=tr;
+		this.str=info;
+	}
+}
